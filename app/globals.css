@@ -1,26 +1,617 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Base typography styles */
+  h1,
+  .h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light text-white;
+  }
+
+  h2,
+  .h2 {
+    @apply text-3xl font-bold text-white;
+  }
+
+  h3,
+  .h3 {
+    @apply text-xl font-bold text-white;
+  }
+
+  h4,
+  .h4 {
+    @apply text-lg font-bold text-white;
+  }
+
+  p,
+  .p {
+    @apply text-base text-zinc-300;
+  }
+
+  .p-large {
+    @apply text-lg md:text-xl text-zinc-300;
+  }
+
+  .p-small {
+    @apply text-sm text-zinc-400;
+  }
+
+  /* Container styles */
+  .container-xl {
+    @apply max-w-screen-xl mx-auto px-4;
+  }
+
+  .container-lg {
+    @apply max-w-screen-lg mx-auto px-4;
+  }
+
+  .container-md {
+    @apply max-w-screen-md mx-auto px-4;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-16;
+  }
+
+  .section-sm {
+    @apply py-8;
+  }
+
+  .section-lg {
+    @apply py-24;
+  }
+
+  a {
+    @apply text-pink-500 hover:text-pink-400;
+  }
+
+  strong {
+    @apply font-bold text-white;
+  }
+
+  em {
+    @apply italic text-zinc-300;
+  }
+}
+
+/* Flippable Card Styles */
+.flip-card-container {
+  height: 420px;
+  perspective: 1000px;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-width: 1px;
+  border-color: rgb(39, 39, 42);
+  padding: 1.5rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(to bottom right, rgb(24, 24, 27), rgb(0, 0, 0));
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Add these styles to the end of your globals.css file */
+
+/* Custom utility classes for the service tabs */
+.bg-pink-600 {
+  background-color: #db2777;
+}
+
+.bg-purple-600 {
+  background-color: #9333ea;
+}
+
+.text-pink-600 {
+  color: #db2777;
+}
+
+.text-purple-600 {
+  color: #9333ea;
+}
+
+.text-pink-300 {
+  color: #f9a8d4;
+}
+
+.text-purple-300 {
+  color: #d8b4fe;
+}
+
+.border-pink-600 {
+  border-color: #db2777;
+}
+
+.border-purple-600 {
+  border-color: #9333ea;
+}
+
+.hover\:bg-pink-600\/5:hover {
+  background-color: rgba(219, 39, 119, 0.05);
+}
+
+.hover\:bg-purple-600\/5:hover {
+  background-color: rgba(147, 51, 234, 0.05);
+}
+
+.hover\:bg-pink-600\/10:hover {
+  background-color: rgba(219, 39, 119, 0.1);
+}
+
+.hover\:bg-purple-600\/10:hover {
+  background-color: rgba(147, 51, 234, 0.1);
+}
+
+/* Hover effect for service tiles */
+.service-tile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-tile:hover {
+  transform: translateY(-4px);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-pink-600 hover:bg-pink-700 text-white font-bold;
+}
+
+.btn-secondary {
+  @apply bg-purple-600 hover:bg-purple-700 text-white font-bold;
+}
+
+/* Tile-based layout styles */
+.tile {
+  @apply border border-zinc-800 p-6;
+}
+
+.tile-dark {
+  @apply bg-black;
+}
+
+.tile-darker {
+  @apply bg-zinc-900;
+}
+
+/* Typography styles */
+.heading-accent {
+  @apply border-l-4 border-pink-600 pl-3;
+}
+
+.heading-accent-alt {
+  @apply border-l-4 border-purple-600 pl-3;
+}
+
+/* Font weight utilities */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+/* Aspect ratio for square buttons */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Add these glass effect styles */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+/* Update the glass-effect-dark class with conic gradient */
+.glass-effect-dark {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-effect-dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03), transparent);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+/* Add this new wet glass effect with conic gradient */
+.glass-effect-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 225deg at 50% 50%,
+    rgba(255, 255, 255, 0.01) 0deg,
+    rgba(255, 255, 255, 0.05) 90deg,
+    rgba(255, 255, 255, 0.01) 180deg,
+    rgba(0, 0, 0, 0.1) 270deg,
+    rgba(0, 0, 0, 0.05) 360deg
+  );
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.glass-effect-white {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-effect-white::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+/* Button hover effects */
+.glass-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.glass-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rounded corners for glass elements */
+.glass-rounded {
+  border-radius: 8px;
+}
+
+.glass-rounded-lg {
+  border-radius: 12px;
+}
+
+.glass-rounded-xl {
+  border-radius: 16px;
+}
+
+/* Add these color variations for glass buttons */
+.glass-pink {
+  border: 1px solid rgba(219, 39, 119, 0.4);
+  box-shadow: 0 4px 6px rgba(219, 39, 119, 0.1), 0 1px 3px rgba(219, 39, 119, 0.05);
+}
+
+.glass-pink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 225deg at 50% 50%,
+    rgba(219, 39, 119, 0.01) 0deg,
+    rgba(255, 255, 255, 0.05) 90deg,
+    rgba(219, 39, 119, 0.02) 180deg,
+    rgba(0, 0, 0, 0.1) 270deg,
+    rgba(0, 0, 0, 0.05) 360deg
+  );
+}
+
+.glass-purple {
+  border: 1px solid rgba(147, 51, 234, 0.4);
+  box-shadow: 0 4px 6px rgba(147, 51, 234, 0.1), 0 1px 3px rgba(147, 51, 234, 0.05);
+}
+
+.glass-purple::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 225deg at 50% 50%,
+    rgba(147, 51, 234, 0.01) 0deg,
+    rgba(255, 255, 255, 0.05) 90deg,
+    rgba(147, 51, 234, 0.02) 180deg,
+    rgba(0, 0, 0, 0.1) 270deg,
+    rgba(0, 0, 0, 0.05) 360deg
+  );
+}
+
+/* Additional color variations */
+.glass-green {
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.1), 0 1px 3px rgba(16, 185, 129, 0.05);
+}
+
+.glass-green::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 225deg at 50% 50%,
+    rgba(16, 185, 129, 0.01) 0deg,
+    rgba(255, 255, 255, 0.05) 90deg,
+    rgba(16, 185, 129, 0.02) 180deg,
+    rgba(0, 0, 0, 0.1) 270deg,
+    rgba(0, 0, 0, 0.05) 360deg
+  );
+}
+
+.glass-cyan {
+  border: 1px solid rgba(8, 145, 178, 0.4);
+  box-shadow: 0 4px 6px rgba(8, 145, 178, 0.1), 0 1px 3px rgba(8, 145, 178, 0.05);
+}
+
+.glass-cyan::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 225deg at 50% 50%,
+    rgba(8, 145, 178, 0.01) 0deg,
+    rgba(255, 255, 255, 0.05) 90deg,
+    rgba(8, 145, 178, 0.02) 180deg,
+    rgba(0, 0, 0, 0.1) 270deg,
+    rgba(0, 0, 0, 0.05) 360deg
+  );
+}
+
+.glass-amber {
+  border: 1px solid rgba(217, 119, 6, 0.4);
+  box-shadow: 0 4px 6px rgba(217, 119, 6, 0.1), 0 1px 3px rgba(217, 119, 6, 0.05);
+}
+
+.glass-amber::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 225deg at 50% 50%,
+    rgba(217, 119, 6, 0.01) 0deg,
+    rgba(255, 255, 255, 0.05) 90deg,
+    rgba(217, 119, 6, 0.02) 180deg,
+    rgba(0, 0, 0, 0.1) 270deg,
+    rgba(0, 0, 0, 0.05) 360deg
+  );
+}
+
+.glass-white-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.glass-black-text {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Enhanced hover effect for wet glass buttons */
+.glass-btn:hover::after {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+/* Add a subtle shimmer animation for the wet glass effect */
+@keyframes wetShimmer {
+  0% {
+    opacity: 0.2;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+    transform: rotate(360deg);
+  }
+}
+
+.glass-btn-shimmer::after {
+  animation: wetShimmer 8s infinite linear;
+}
+
+/* Solid text colors for buttons */
+.text-pink-solid {
+  color: #ec4899; /* Solid pink color */
+}
+
+.text-purple-solid {
+  color: #a855f7; /* Solid purple color */
+}
+
+.text-white-solid {
+  color: #ffffff; /* Solid white color */
+}
+
+/* Add these neon border button styles */
+.neon-border-button {
+  background-color: black;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.neon-border-button:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.neon-border-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.neon-border-red {
+  border-color: rgba(255, 0, 60, 0.9);
+  box-shadow: 0 0 5px rgba(255, 0, 60, 0.5);
+}
+
+.neon-border-red:hover {
+  box-shadow: 0 0 8px rgba(255, 0, 60, 0.8);
+}
+
+.neon-border-red:active {
+  box-shadow: 0 0 3px rgba(255, 0, 60, 0.5);
+}
+
+.neon-border-white {
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.neon-border-white:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.neon-border-white:active {
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Additional styles for the building blocks section */
+.bg-green-600 {
+  background-color: #10b981;
+}
+
+.bg-cyan-600 {
+  background-color: #0891b2;
+}
+
+.bg-amber-600 {
+  background-color: #d97706;
+}
+
+.text-green-400 {
+  color: #34d399;
+}
+
+.text-cyan-400 {
+  color: #22d3ee;
+}
+
+.text-amber-400 {
+  color: #fbbf24;
+}
+
+.border-green-600 {
+  border-color: #10b981;
+}
+
+.border-cyan-600 {
+  border-color: #0891b2;
+}
+
+.border-amber-600 {
+  border-color: #d97706;
+}
+
+/* Glass navigation styles */
+.glass-nav {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }

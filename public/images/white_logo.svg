@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 883 959.05">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <g id="Layer_3" data-name="Layer 3">
-    <g>
-      <g>
-        <polygon class="cls-1" points="848 585.96 828.41 110.25 517.38 367.27 609.72 286.12 848 66.88 848 585.96 848 585.96"/>
-        <polygon class="cls-1" points="812.51 567.35 798.52 176.99 526.48 397.09 547.46 378.97 814 144.55 814 532.81 812.51 567.35"/>
-        <polygon class="cls-1" points="785.63 535.17 774.17 230.5 561.77 407.85 598.56 375.89 785 207.14 785 486.62 785.63 535.17"/>
-        <polygon class="cls-1" points="878 617.72 858.41 43.37 463.25 379.81 652.74 212.67 878 0 878 519.08 878 617.72"/>
-      </g>
-      <polygon class="cls-1" points="127.46 220.31 127.46 959.05 0 912.93 0 18.47 431.77 394.5 543.01 430.18 400.29 430.18 127.46 220.31"/>
-      <polygon class="cls-1" points="769.67 868.81 883 913.11 883 604.37 773.86 570.79 769.67 868.81"/>
-    </g>
-  </g>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:bed09f2da53fd013afaa6767fed3e900f40e36c6c7a8fff7eabea4b3ca2b5267
+size 1076

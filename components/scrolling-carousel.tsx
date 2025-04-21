@@ -27,25 +27,25 @@ export function ScrollingCarousel({ className, speed = "normal", imageSize = "me
     {
       id: 2,
       type: "video",
-      src: "/videos/stories1a.mp4",
+      src: "https://res.cloudinary.com/mazira/video/upload/v1745203144/mazira_assets/videos/stories4_cgt2mp.mp4",
       alt: "Instagram story video",
     },
     {
       id: 3,
       type: "image",
-      src: "/images/square4.png",
+      src: "https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square2_ynsbje.png",
       alt: "Iconic brand image",
     },
     {
       id: 4,
       type: "video",
-      src: "/videos/stories3.mp4",
+      src: "https://res.cloudinary.com/mazira/video/upload/v1745203146/mazira_assets/videos/stories5_opc16u.mp4",
       alt: "Instagram story video",
     },
     {
       id: 5,
       type: "image",
-      src: "/images/square5.png",
+      src: "https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square9_ogh9jr.png",
       alt: "Dance till you drop advertisement",
     },
     {
@@ -57,19 +57,19 @@ export function ScrollingCarousel({ className, speed = "normal", imageSize = "me
     {
       id: 7,
       type: "image",
-      src: "/images/square8.png",
+      src: "https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square5_cvwsgn.png",
       alt: "Smart IT Solutions",
     },
     {
       id: 8,
       type: "video",
-      src: "/videos/stories5.mp4",
+      src: "https://res.cloudinary.com/mazira/video/upload/v1745203147/mazira_assets/videos/stories1_dnedag.mp4",
       alt: "Instagram story video",
     },
     {
       id: 9,
       type: "image",
-      src: "/images/square3.png",
+      src: "https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square5_cvwsgn.png",
       alt: "Immerse Yourself",
     },
   ]

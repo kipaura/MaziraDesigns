@@ -68,7 +68,7 @@ export function SiteFooter() {
           <div className="md:col-span-3 space-y-4">
             <Link href="/" className="inline-flex items-center gap-2">
               <div className="w-8 h-8">
-                <img src="/images/white_logo.svg" alt="Mazira Logo" className="w-full h-full" />
+                <img src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745205189/mazira_assets/images/white_logo_prshug.svg" alt="Mazira Logo" className="w-full h-full" />
               </div>
               <h2 className="font-bold">
                 <span className="text-pink-600">MAZIRA</span>

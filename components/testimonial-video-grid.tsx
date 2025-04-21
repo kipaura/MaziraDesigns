@@ -22,7 +22,7 @@ export function TestimonialVideoGrid() {
       quote:
         "We went from 3 random posts a week to a branded content system. Engagement's up 40%, and we didn't lift a finger.",
       author: "DTC Brand",
-      videoSrc: "/videos/ecommerce.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203133/mazira_assets/videos/ecommerce_rkjzk6.mp4",
     },
     {
       id: "dtc2",
@@ -30,21 +30,21 @@ export function TestimonialVideoGrid() {
       quote:
         "Mazira helped us launch a consistent email campaign that actually converts. Our abandoned cart recovery tripled in 2 months.",
       author: "E-Commerce Founder",
-      videoSrc: "/videos/ecommerce.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203134/mazira_assets/videos/nonprofit_rbl7wh.mp4",
     },
     {
       id: "coach1",
       industry: "Coaching / Consulting",
       quote: "I've booked 4 new clients just from the blog + email package. It sounds like me—but way more strategic.",
       author: "Business Coach",
-      videoSrc: "/videos/consultant.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203132/mazira_assets/videos/consultant_ldpocp.mp4",
     },
     {
       id: "coach2",
       industry: "Coaching / Consulting",
       quote: "I stopped overthinking content. Mazira made it modular, repeatable, and totally hands-off.",
       author: "Consultant",
-      videoSrc: "/videos/consultant.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203133/mazira_assets/videos/reseller_sieewa.mp4",
     },
     {
       id: "beauty1",
@@ -52,14 +52,14 @@ export function TestimonialVideoGrid() {
       quote:
         "Their Reels and Stories made our brand feel 10x more polished. We're finally proud of how we show up online.",
       author: "Beauty Brand",
-      videoSrc: "/videos/beauty.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203122/mazira_assets/videos/beauty_z2vqqg.mp4",
     },
     {
       id: "beauty2",
       industry: "Beauty / Wellness",
       quote: "Customers literally DM us saying, 'your content is fire.' That never happened before Mazira.",
       author: "Wellness Studio",
-      videoSrc: "/videos/beauty.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203133/mazira_assets/videos/contentcreator_efd8iw.mp4",
     },
     {
       id: "saas1",
@@ -67,7 +67,7 @@ export function TestimonialVideoGrid() {
       quote:
         "Mazira became our async content team. We ship updates, case studies, and feature posts without touching Google Docs.",
       author: "SaaS Founder",
-      videoSrc: "/videos/saas.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203133/mazira_assets/videos/contentcreator_efd8iw.mp4",
     },
     {
       id: "saas2",
@@ -75,7 +75,7 @@ export function TestimonialVideoGrid() {
       quote:
         "We needed content fast that didn't feel cheap. Mazira delivered custom work that looked in-house—on a startup budget.",
       author: "Startup Operator",
-      videoSrc: "/videos/saas.mp4",
+      videoSrc: "https://res.cloudinary.com/mazira/video/upload/v1745203132/mazira_assets/videos/consultant_ldpocp.mp4",
     },
   ]
 

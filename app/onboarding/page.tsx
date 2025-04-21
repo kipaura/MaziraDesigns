@@ -110,7 +110,7 @@ function OnboardingContent() {
               {/* Center Image */}
               <div className="flex items-center justify-center">
                 <Image
-                  src="/images/onboarding-flow.svg"
+                  src="https://res.cloudinary.com/mazira/image/upload/v1745202865/mazira_assets/images/onboarding-flow_ncxtll.svg"
                   alt="Onboarding process visualization"
                   width={300}
                   height={300}

@@ -194,7 +194,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="/images/square1.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/email1_iopxf8.png"
                     alt="Custom design social post"
                     layout="fill"
                     objectFit="cover"
@@ -213,7 +213,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="/images/square8.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square4_t8zvfy.png"
                     alt="Smart IT Solutions"
                     layout="fill"
                     objectFit="cover"
@@ -232,7 +232,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="/images/square4.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square5_cvwsgn.png"
                     alt="Educational content design"
                     layout="fill"
                     objectFit="cover"
@@ -251,7 +251,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="/images/square5.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square6_fop0ur.png"
                     alt="Event promotion design"
                     layout="fill"
                     objectFit="cover"

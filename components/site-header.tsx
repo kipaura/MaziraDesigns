@@ -34,7 +34,7 @@ export function SiteHeader() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8">
-              <img src="/images/white_logo.svg" alt="Mazira Logo" className="w-full h-full" />
+              <img src="https://res.cloudinary.com/mazira/image/upload/v1745202865/mazira_assets/images/onboarding-flow_ncxtll.svg" alt="Mazira Logo" className="w-full h-full" />
             </div>
             <Typography.H3 className="font-light">
               <span className="text-pink-600">MAZIRA</span>

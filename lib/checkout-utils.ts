@@ -2,6 +2,7 @@ type ServiceItem = {
   name: string
   tier: string
   price: number
+  priceId: string
 }
 
 export async function prepareCheckoutPayload(services: ServiceItem[]) {

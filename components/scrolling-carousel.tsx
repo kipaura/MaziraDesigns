@@ -27,7 +27,7 @@ export function ScrollingCarousel({ className, speed = "normal", imageSize = "me
     {
       id: 2,
       type: "video",
-      src: "/videos/stories1.mp4",
+      src: "/videos/stories1a.mp4",
       alt: "Instagram story video",
     },
     {

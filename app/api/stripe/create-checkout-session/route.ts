@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 import Stripe from "stripe"
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  apiVersion: "2023-10-16",
+  apiVersion: "2025-03-31.basil",
 })
 
 export async function POST(req: Request) {
@@ -34,8 +34,8 @@ export async function POST(req: Request) {
       payment_method_types: ["card"],
       mode: "payment",
       line_items,
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/onboarding?success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/build?canceled=true`,
+      success_url: `${baseUrl}/onboarding?success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/build?canceled=true`,
       metadata: {
         source: "website_checkout",
       },

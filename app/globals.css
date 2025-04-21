@@ -496,20 +496,31 @@
 /* Add a subtle shimmer animation for the wet glass effect */
 @keyframes wetShimmer {
   0% {
-    opacity: 0.2;
-    transform: rotate(0deg);
+    opacity: 0.15;
+    transform: translateX(0%);
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.25;
+    transform: translateX(100%);
   }
   100% {
-    opacity: 0.2;
-    transform: rotate(360deg);
+    opacity: 0.15;
+    transform: translateX(0%);
   }
 }
 
 .glass-btn-shimmer::after {
-  animation: wetShimmer 8s infinite linear;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  animation: wetShimmer 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Solid text colors for buttons */

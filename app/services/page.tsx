@@ -127,10 +127,10 @@ export default function ServicesPage() {
 
   // Video showcase data
   const videoShowcase = [
-    { src: "/videos/stories4.mp4", title: "Product Showcase" },
-    { src: "/videos/stories2.mp4", title: "Brand Story" },
-    { src: "/videos/stories5.mp4", title: "Tutorial" },
-    { src: "/videos/stories1.mp4", title: "Promotion" },
+    { src: "https://res.cloudinary.com/mazira/video/upload/v1745203146/mazira_assets/videos/stories5_opc16u.mp4", title: "Product Showcase" },
+    { src: "https://res.cloudinary.com/mazira/video/upload/v1745203145/mazira_assets/videos/stories2_xhusb6.mp4", title: "Brand Story" },
+    { src: "https://res.cloudinary.com/mazira/video/upload/v1745203144/mazira_assets/videos/stories4_cgt2mp.mp4", title: "Tutorial" },
+    { src: "https://res.cloudinary.com/mazira/video/upload/v1745203147/mazira_assets/videos/stories1_dnedag.mp4", title: "Promotion" },
   ]
 
   const handlePackageSelect = (service: string, tier: string, price: string) => {
@@ -194,7 +194,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/email1_iopxf8.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square9_ogh9jr.png"
                     alt="Custom design social post"
                     layout="fill"
                     objectFit="cover"
@@ -213,7 +213,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square4_t8zvfy.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/v1745202865/mazira_assets/images/square8_mjbmee.png"
                     alt="Smart IT Solutions"
                     layout="fill"
                     objectFit="cover"
@@ -232,7 +232,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square5_cvwsgn.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745203397/mazira_assets/images/square7_w4bbrt.png"
                     alt="Educational content design"
                     layout="fill"
                     objectFit="cover"
@@ -251,7 +251,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="absolute inset-0 bg-zinc-900">
                   <Image
-                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square6_fop0ur.png"
+                    src="https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square5_cvwsgn.png"
                     alt="Event promotion design"
                     layout="fill"
                     objectFit="cover"
@@ -616,7 +616,9 @@ export default function ServicesPage() {
               <div key={index} className="relative aspect-[9/16] rounded-lg overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
                 <video
-                  ref={(el) => (videoRefs.current[`video-${index}`] = el)}
+                  ref={(el) => {
+                    videoRefs.current[`video-${index}`] = el;
+                  }}
                   className="w-full h-full object-cover"
                   muted
                   loop

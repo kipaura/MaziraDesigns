@@ -51,7 +51,7 @@ export function ScrollingCarousel({ className, speed = "normal", imageSize = "me
     {
       id: 6,
       type: "video",
-      src: "/videos/stories4.mp4",
+      src: "https://res.cloudinary.com/mazira/video/upload/v1745203144/mazira_assets/videos/stories3_z3mmsr.mp4",
       alt: "Instagram story video",
     },
     {

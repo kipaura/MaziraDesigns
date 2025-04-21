@@ -21,7 +21,7 @@ export function ScrollingCarousel({ className, speed = "normal", imageSize = "me
     {
       id: 1,
       type: "image",
-      src: "/images/square1.png",
+      src: "https://res.cloudinary.com/mazira/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745202865/mazira_assets/images/square1_yic7cu.png",
       alt: "Art Expo advertisement",
     },
     {

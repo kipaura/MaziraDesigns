@@ -1,17 +1,15 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # === Node Modules ===
 node_modules/
 
-# === Next.js build ===
+# === Next.js Build ===
 .next/
 out/
 
-# === System files ===
+# === System Files ===
 .DS_Store
 Thumbs.db
 
-# === Env files ===
+# === Environment Variables ===
 .env
 .env.*.local
 .env.local
@@ -22,18 +20,18 @@ Thumbs.db
 # === Logs ===
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 
-# === Editor files ===
+# === Editor Files ===
 .vscode/
 .idea/
 
-# === Testing / coverage ===
+# === Testing / Coverage ===
 coverage/
 *.lcov
 
-# === Git LFS if used ===
+# === Media Files ===
+# Ignore heavy/binary assets globally EXCEPT what's inside public/
 *.psd
 *.zip
 *.gz
@@ -44,3 +42,14 @@ coverage/
 *.jpg
 *.jpeg
 *.svg
+
+# --- But allow images/videos in public/
+!public/images/
+!public/images/*.png
+!public/images/*.jpg
+!public/images/*.jpeg
+!public/images/*.svg
+
+!public/videos/
+!public/videos/*.mp4
+!public/videos/*.mov

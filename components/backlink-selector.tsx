@@ -8,7 +8,7 @@ import { BaseServiceSelector } from "@/components/base-service-selector"
 import { VSpacer } from "@/components/ui/spacing"
 import { GradientDivider } from "@/components/ui/spacing"
 import { CardContainer } from "@/components/ui/card-container"
-import { prepareCheckoutPayload } from "@/lib/checkout-utils"
+import { prepareCheckoutPayload } from "@/lib/stripe/utils/checkout-utils"
 
 type PlanOption = {
   label: string

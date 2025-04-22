@@ -1,4 +1,33 @@
+//File: priceIdLookup.ts
+// This mapping is used to look up the price ID based on the product name when creating a checkout session.
+// The price IDs are specific to the Stripe account and should be kept secure.
+// The mapping is structured as a record where the keys are product names and the values are their corresponding price IDs.
+
+/**
+ * A lookup table mapping product descriptions to their corresponding Stripe price IDs.
+ * 
+ * This object is organized into several categories, each representing a type of service or product.
+ * Each key is a human-readable description of the product, and the value is the associated Stripe price ID.
+ * 
+ * ### Categories:
+ * 
+ * - **Social Media Posts**: Pricing for various quantities of social media posts.
+ * - **Video: Short Form**: Pricing for short-form video packages.
+ * - **Video: Long Form**: Pricing for long-form video packages.
+ * - **Blog Posts**: Pricing for blog post packages.
+ * - **Email Campaigns**: Pricing for email campaign packages.
+ * - **Backlinks**: Pricing for backlinks based on domain authority (DA) ranges.
+ * - **Stories**: Pricing for daily story packs, typically for Instagram.
+ * - **Carousels**: Pricing for Instagram carousel series with varying numbers of posts.
+ * - **Social Add-Ons**: Additional social media platforms that can be added to social media post packages.
+ * - **Platform Add-Ons (Short Form Video)**: Additional platforms for short-form video packages, with free and paid options.
+ * - **Platform Add-Ons (Long Form Video)**: Additional platforms for long-form video packages, with free and paid options.
+ * 
+ * This lookup table is used to retrieve the Stripe price ID for a given product description, enabling integration
+ * with Stripe's API for payment processing.
+ */
 export const priceIdLookup: Record<string, string> = {
+   
     // ==== SOCIAL MEDIA POSTS ====
     "10 Social Posts": "price_1RBAj8Aog87WCP1EZThpEO52",
     "15 Social Posts": "price_1RBAj7Aog87WCP1E2PC6WHtr",
@@ -45,11 +74,13 @@ export const priceIdLookup: Record<string, string> = {
     "DA 60+": "price_1RBAiuAog87WCP1Eeg2SaXIv",
   
     // ==== STORIES ====
+        // lives under Instagram Add-Ons
     "10 Daily Stories Pack": "price_1RBAj1Aog87WCP1ETnoTxTrh",
     "20 Daily Stories Pack": "price_1RBAj1Aog87WCP1Eh81mlhPh",
     "30 Daily Stories Pack": "price_1RBAj0Aog87WCP1EognDrhd7",
   
     // ==== CAROUSELS ====
+        // lives under Instagram Add-Ons
     "5-Post Instagram Carousel Series": "price_1RBAj0Aog87WCP1EDlWEQcgP",
     "10-Post Instagram Carousel Series": "price_1RBAizAog87WCP1EVMHvLFO9",
     "15-Post Instagram Carousel Series": "price_1RBAizAog87WCP1ED9YwvVqB",
@@ -57,7 +88,8 @@ export const priceIdLookup: Record<string, string> = {
     "25-Post Instagram Carousel Series": "price_1RBAiyAog87WCP1Et19MB5dE",
     "30-Post Instagram Carousel Series": "price_1RBAixAog87WCP1Ep1g3szRD",
   
-    // ==== PLATFORM ADD-ONS ====
+    // ==== SocialADD-ONS ====
+        // always offered as one free with social posts selection, and unlimited additional within this category
     "Add Instagram (Social)": "price_1RDxvgAog87WCP1E6dbFV1sI",
     "Add TikTok (Social)": "price_1RDxvhAog87WCP1Eyjv85Jz5",
     "Add Facebook (Social)": "price_1RDxvhAog87WCP1En85Lt8PQ",
@@ -71,6 +103,9 @@ export const priceIdLookup: Record<string, string> = {
     "Free Pinterest (Social)": "price_1RBAj2Aog87WCP1E3bykvrD7",
     "Free Google (Social)": "price_1RBAj2Aog87WCP1EpSy9E5gk",
   
+
+    // ==== Platform Add-Ons (Short Form Video) ====
+    // always offered as one free with Short Form Video selection, and unlimited additional within this category
     "Add Instagram (Video)": "price_1RDxviAog87WCP1E37g1h0Da",
     "Add TikTok (Video)": "price_1RDxvjAog87WCP1EvvCKImdr",
     "Add Facebook (Video)": "price_1RBAjOAog87WCP1Ennnv4MVK",
@@ -84,7 +119,11 @@ export const priceIdLookup: Record<string, string> = {
     "Free YouTube (Video)": "price_1RBAjHAog87WCP1E5JM4UMmj",
     "Free Google (Video)": "price_1RBAjHAog87WCP1EgUt8eOXd",
   
-    "Add Facebook (Video - Long)": "price_1RBAjFAog87WCP1El8fSerxL",
+    // ==== Platform Add-Ons (Long Form Video) ====
+        // always offered as one free with Long Form Video selection, and unlimited additional within this category
+    "Add Instagram (Video - Long)": "price_1RBAjFAog87WCP1El8fSerxL",
+    "Add TikTok (Video - Long)": "price_1RBAjGAog87WCP1Ej3aCPcC4",
+    "Add Facebook (Video - Long)": "price_1RBAjGAog87WCP1EAisog7W4",
     "Add LinkedIn (Video - Long)": "price_1RBAjFAog87WCP1EjeS2toRd",
     "Add YouTube (Video - Long)": "price_1RBAjEAog87WCP1EJCoXxehQ",
     "Add Google (Video - Long)": "price_1RBAjEAog87WCP1Eylj4gemf",

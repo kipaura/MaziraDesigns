@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation"
 import { GlassCard } from "@/components/glass-card"
 import { CardContainer } from "@/components/ui/card-container"
 import { VSpacer } from "@/components/ui/spacing"
-import { prepareCheckoutPayload } from "@/lib/checkout-utils"
+import { prepareCheckoutPayload } from "@/lib/stripe/utils/checkout-utils"
 
 // Create a reusable step card component
 function StepCard({

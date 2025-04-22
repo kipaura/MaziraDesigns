@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils"
 import { useMobile } from "@/hooks/use-mobile"
 import { CardContainer } from "@/components/ui/card-container"
 import { VSpacer } from "@/components/ui/spacing"
-import { prepareCheckoutPayload } from "@/lib/checkout-utils"
+import { prepareCheckoutPayload } from "@/lib/stripe/utils/checkout-utils"
 
 type ServiceSummaryProps = {
   selectedServices: string[] | Array<{ name: string; tier: string; price: number }>,
